@@ -1,7 +1,7 @@
 const productsModel = require('../models/products_model');
 
 module.exports = {
-    list: (req, res, next) => {
+    getList: (req, res, next) => {
         productsModel.fetchAll()
         .then( ( [data] ) => {
             res.render('products', { title: 'Product List', data: data });
@@ -9,8 +9,7 @@ module.exports = {
         .catch( err => console.log(err));
     },
     
-    search: (req, res, next) => {
-        console.log(req.query.id);
+    getSearch: (req, res, next) => {
         productsModel.fetchById(req.query.id)
         .then( ( [data] ) => {
             res.render('productsSearch', { title: 'Product Search', data: data });
@@ -18,7 +17,7 @@ module.exports = {
         .catch( err => console.log(err));
     },
 
-    edit: (req, res, next) => {
+    getEdit: (req, res, next) => {
         productsModel.fetchById(req.query.id)
         .then( ( [data] ) => {
             res.render('productEdit', { title: 'Product Edit', data: data });
@@ -26,7 +25,7 @@ module.exports = {
         .catch( err => console.log(err));
     },
 
-    update: (req, res, next) => {
+    postUpdate: (req, res, next) => {
         var sqlData = {
             id: req.body.id,
             name: req.body.name,
@@ -39,7 +38,7 @@ module.exports = {
         .catch( err => console.log(err));
     },
 
-    delete: (req, res, next) => {
+    getDelete: (req, res, next) => {
         productsModel.delete(req.query.id)
         .then( ( [data] ) => {
             res.redirect('/products');
@@ -47,7 +46,11 @@ module.exports = {
         .catch( err => console.log(err));
     },
 
-    add: (req, res, next) => {
+    getAdd: (req, res, next) => {
+        res.render('productAdd', { title: 'Add Product', msg: '' });
+    },
+    
+    postAdd: (req, res, next) => {
         var sqlData = {
             name: req.body.name,
             price: req.body.price,
