@@ -9,21 +9,11 @@
         crossorigin="anonymous">
 
     <title>Bootstrap Sandbox</title>
-    <style>
-        .row-hl {
-            background: #f4f4f4;
-            height: 150px;
-        }
-
-        .item-hl {
-            border: 1px solid #333;
-        }
-    </style>
 </head>
 
 <body>
     <header>
-        <h1 class="display-3 text-center my-4">Auto Margins & Wrapping</h1>
+        <h1 class="display-3 text-center my-4">Input Groups & Addons</h1>
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -95,103 +85,94 @@
     </header>
 
     <div class="container">
-        <!--#####################START HERE######################-->
+        <!--##################START HERE###################-->
 
-        <!-- MR-AUTO -->
-        <div class="d-flex row-hl">
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
+        <!-- BASIC INPUT GROUPS -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">@</span>
+            </div>
+            <input class="form-control" type="text" placeholder="Username">
         </div>
 
         <br>
-        <br>
 
-        <!-- ML-AUTO -->
-        <div class="d-flex row-hl">
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Username">
+            <div class="input-group-append">
+                <span class="input-group-text">@something.com</span>
+            </div>
         </div>
 
         <br>
-        <br>
 
-        <!-- MB-AUTO -->
-        <div class="d-flex flex-column row-hl">
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
+        <label for="basic-url">Custom URL</label>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">https://something.com/member/</span>
+            </div>
+            <input type="text" class="form-control">
         </div>
 
         <br>
-        <br>
 
-        <!-- MT-AUTO -->
-        <div class="d-flex flex-column row-hl">
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+            </div>
+            <input class="form-control" type="text">
+            <div class="input-group-append">
+                <span class="input-group-text">.00</span>
+            </div>
         </div>
 
         <br>
-        <br>
 
-        <!-- NO WRAP -->
-        <div class="d-flex row-hl">
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-
+        <!-- CHECKBOX -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="checkbox">
+                </div>
+            </div>
+            <input type="text" class="form-control">
         </div>
 
         <br>
-        <br>
 
-        <!-- WRAP -->
-        <div class="d-flex row-hl">
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
-            <div class="p-2 item-hl">Flex item</div>
+        <!-- RADIO -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="radio">
+                </div>
+            </div>
+            <input type="text" class="form-control">
         </div>
 
         <br>
-        <br>
 
-        <!-- ORDERING -->
-        <div class="d-flex row-hl">
-            <div class="p-2 item-hl">First flex item</div>
-            <div class="p-2 item-hl">Second flex item</div>
-            <div class="p-2 item-hl">Third flex item</div>
+        <!-- MULTIPLE INPUTS -->
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="">Name & Email</span>
+            </div>
+            <input class="form-control" type="text" placeholder="Full Name">
+            <input class="form-control" type="email" placeholder="Email">
         </div>
 
+        <br>
+
+        <!-- BUTTON ADDONS -->
+        <div class="input-group mb-3">
+            <input class="form-control" type="text" placeholder="Find By Name...">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Search</button>
+            </div>
+        </div>
 
     </div>
-
+    <!-- ./container -->
     <div style="margin-top:500px;"></div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
